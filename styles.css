@@ -1,0 +1,370 @@
+:root{
+    --dark-grey-color: #5a5959;
+    --black: #16191bcc;
+    --light-grey-color:#7f7e7e;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    padding: 1rem 9%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+    background: #666666;
+    color: #fff;
+}
+
+header img {
+    width: 8%;
+    height: 8%;
+    margin-left: 2rem;
+}
+
+nav {
+    display: flex;
+    font-size: 0.7rem;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main .content-container{
+    padding: 2rem 4rem;
+}
+
+main .newsletter-section{
+    padding: 2rem 5rem;
+}
+.content-container {
+    display: flex;
+    flex-wrap: row;
+}
+
+aside {
+    width: 20%;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 1rem;
+    font-size: 0.6rem;
+}
+
+.categories {
+    margin-bottom: 1rem;
+}
+
+hr{
+    border: 0.05rem solid lightgrey;
+    
+}
+
+.categories hr {
+    margin: 1rem 0;
+}
+
+select {
+    margin-bottom: 0.2rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none; 
+    outline: none; 
+    color: var(--light-grey-color); 
+    font-family: inherit; 
+}
+
+.product-types {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    color: var(--light-grey-color);
+}
+
+.product-types li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+section.main-content {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    align-self: start;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+h3 {
+   font-size: 0.8rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: 22%;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.product-card img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    margin: 0.2rem 0;
+    text-align: left;
+}
+
+.product-card p {
+    color: var(--black);
+    font-size: 0.8rem;
+}
+
+.product-card p:last-child {
+    color: var(--light-grey-color);
+    font-size: 0.6rem;   
+}
+
+button {
+    background-color: white;
+    color: orange;
+    border: 1px orange solid;
+    padding: 1rem 2rem;
+    width: 30%;
+    height: 10%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.newsletter-section {
+    width: 100%;
+    margin-left: 0;
+    background-color: rgba(11, 29, 11, 0.72);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+}
+
+.newsletter-text {
+    width: 40%;
+}
+
+.newsletter-text p strong {
+    font-size: 1.5rem;
+}
+
+.newsletter-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div table:first-child {
+    width: 50%;
+    background-color: inherit;
+}
+
+div table:last-child {
+    width: 50%;
+    background-color: inherit;
+}
+
+td {
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+
+/* Target the first TD in the second row */
+.newsletter-form table tr:nth-child(2) td:nth-child(1) {
+    /* Styles for the first TD in the second row */
+    width: 20%;
+  }
+  
+  /* Target the second TD in the second row (the button) */
+.newsletter-form table tr:nth-child(2) td:nth-child(2) {
+    /* Styles for the second TD (button) in the second row */
+    width: 20%;
+  }
+  
+footer {
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bottom-half{
+    background-color: #f2f2f2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: wrap;
+}
+
+.footer-links-container {
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.link-section {
+    margin: 2rem;
+}
+
+.link-section p {
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    color: var(--light-grey-color);
+}
+
+.link-section p:first-child {
+    color: black;
+}
+
+.email-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.email-signup p {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    align-items: left;
+    font-weight: bold;
+}
+
+.email-signup-input-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.email-signup input[type="email"] {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid lightgrey;
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+}
+
+.email-signup button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media li {
+    color: black;;
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.social-media li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-ending {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 5rem;
+}
+
+.country-flag{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+}
+
+.country-flag img {
+     width: 10%;
+     height: 10%;
+     margin-right: 0.5rem;
+}
+
+.copyright-line{
+    margin-left: 68rem;
+}
+
+.footer-ending div p {
+    font-size: 0.7rem;
+}
+
+.copyright-line p {
+    color: var(--light-grey-color);
+}
+
+.footer-final {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-final li {
+    color: black;;
+    list-style-type: none;
+    margin: 1rem;
+    font-size: 0.7rem;
+}
