@@ -5,10 +5,16 @@
   }
 
 body {
+    font-size: 16px; /* Set a base font size */
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+.container { /* Wrap your main content in a container class */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
 
 header{
     padding: 1rem 9%;
@@ -23,8 +29,8 @@ header{
 }
 
 header img {
-    width: 8%;
-    height: 8%;
+    width: 24%;
+    height: 24%;
     margin-left: 2rem;
 }
 
@@ -41,7 +47,7 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 1rem;
+    margin: 0 0.6rem;
 }
 
 a {
@@ -65,14 +71,15 @@ aside {
     width: 20%;
     padding: 1rem;
     margin-right: 1rem;
+    margin-top: 0.6rem;
 }
 
 input[type="text"] {
     width: 90%;
     padding: 0.5rem 1rem;
-    border: 1px solid lightgrey;
+    border: 1px solid rgb(205, 199, 199);
     margin-bottom: 1rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 .categories {
@@ -118,14 +125,15 @@ section.main-content {
     align-items: center;
 }
 
-h1 {
+.heading {
     align-self: start;
     margin-bottom: 1rem;
     margin-left: 1rem;
+    font-size: 1.6rem;
 }
 
-h3 {
-   font-size: 0.8rem;
+.sub-heading {
+   font-size: 1.2rem;
 }
 
 .product-grid {
@@ -135,10 +143,10 @@ h3 {
 }
 
 .product-card {
-    width: 22%;
+    width: 27%;
     margin-bottom: 1rem;
     text-align: center;
-    padding: 1rem;
+    padding: 0.7rem;
 }
 
 .product-card img {
@@ -153,12 +161,12 @@ h3 {
 
 .product-card p {
     color: var(--black);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .product-card p:last-child {
     color: var(--light-grey-color);
-    font-size: 0.6rem;   
+    font-size: 0.8rem;   
 }
 
 button {
@@ -175,10 +183,11 @@ button {
 .newsletter-section {
     width: 100%;
     margin-left: 0;
-    background-color: rgba(11, 29, 11, 0.72);
+    background-image: url('./images/newsletter-bkg.png');
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem;
     color: white;
 }
@@ -188,47 +197,51 @@ button {
 }
 
 .newsletter-text p strong {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
-
 .newsletter-form {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-div table:first-child {
-    width: 50%;
-    background-color: inherit;
-}
-
-div table:last-child {
-    width: 50%;
-    background-color: inherit;
-}
-
-td {
-    color: white;
+.newsletter-form input,
+.newsletter-form select {
+    background-color: transparent;
+    color: inherit;
     border: 1px solid white;
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    padding: 1.1rem 1.2rem;
+    font-size: 0.9rem;
 }
 
+.newsletter-form input {
+    width: 115%;
+    border-bottom: none;
+    margin-bottom: 0;
+    height: 100%;
+}
 
-/* Target the first TD in the second row */
-.newsletter-form table tr:nth-child(2) td:nth-child(1) {
-    /* Styles for the first TD in the second row */
-    width: 20%;
-  }
-  
-  /* Target the second TD in the second row (the button) */
-.newsletter-form table tr:nth-child(2) td:nth-child(2) {
-    /* Styles for the second TD (button) in the second row */
-    width: 20%;
-  }
-  
+.newsletter-form select {
+    margin-top: 0;
+    width: 100%; 
+}
+.newsletter-form input::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+.newsletter-form button {
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+    border-left: none;
+    padding: 1.2rem 1.1rem;
+    font-size: 0.9rem;
+    background-color: inherit; /* Remove default button background */
+    cursor: pointer;
+}
+
 footer {
     color: black;
     padding: 2rem;
@@ -243,16 +256,19 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto; /* Center the content horizontally */
 }
 
 .footer-links {
     display: flex;
     flex-direction: wrap;
+    margin-left: 2rem;
 }
 
 .footer-links-container {
     flex-direction: column;
     margin-right: 5rem;
+    text-align: left;
 }
 
 .link-section {
@@ -263,7 +279,7 @@ footer {
     font-weight: bold;
     font-size: 0.7rem;
     margin-bottom: 0.5rem;
-    color: var(--light-grey-color);
+    color: rgb(172, 172, 172);
 }
 
 .link-section p:first-child {
@@ -274,6 +290,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-right: 4rem;
 }
 
 .email-signup p {
@@ -298,6 +315,7 @@ footer {
 }
 
 .email-signup button {
+    width: 60%;
     background-color: black;
     color: white;
     border: none;
@@ -336,6 +354,7 @@ footer {
      flex-direction: row;
      align-items: center;
      justify-content: center;
+     margin-left: 1.2rem;
 }
 
 .country-flag img {
@@ -344,8 +363,11 @@ footer {
      margin-right: 0.5rem;
 }
 
+.country-flag p {
+    color: var(--light-grey-color);
+}
 .copyright-line{
-    margin-left: 68rem;
+    margin-left: 64rem;
 }
 
 .footer-ending div p {
@@ -367,4 +389,74 @@ footer {
     list-style-type: none;
     margin: 1rem;
     font-size: 0.7rem;
+}
+
+@media (min-width: 992px) {
+    /* Styles for desktops here */
+    .content-container {
+        display: flex;
+        flex-wrap: row;
+    }
+    
+    aside {
+        width: 20%;
+    }
+    
+    section.main-content {
+        width: 78%;
+    }
+    
+    /* Other styles for larger screens */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for tablets here */
+    .content-container {
+        flex-direction: column;
+    }
+    
+    aside, section.main-content {
+        width: 100%;
+    }
+    
+    /* Other styles for tablets */
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile phones here */
+    .content-container, .footer-content {
+        flex-direction: column;
+
+    }
+    
+    aside, section.main-content {
+        width: 100%;
+    }
+    header, nav {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        justify-content: flex-start;
+    }
+    
+    .product-grid {
+        flex-direction: column;
+    }
+    
+    .product-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-text, .newsletter-form {
+        width: 100%;
+    }
+    
+    /* Other styles for mobile phones */
 }

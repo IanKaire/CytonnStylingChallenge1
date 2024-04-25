@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="/app.js" defer></script>
   </head>
   <body>
     <header>
@@ -25,16 +26,18 @@
           <li><a href="#">Services</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
-          <li><a href="#"><i class="fas fa-search"></i></a></li>
+          <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
+          <input type="text" id="search-bar" placeholder="Search our products" style="display: none;">  
         </ul>
       </nav>
     </header>
     <main>
+     <section class="container">
       <section class="content-container">
         <aside class="sidebar">
           <input type="text" placeholder="Search our products" />
           <div class="categories">
-            <h3>CATEGORIES</h3>
+            <p class="sub-heading">CATEGORIES</p>
             <hr />
             <select name="categories">
               <option value="tiles">Tiles (14,817)</option>
@@ -64,7 +67,7 @@
             <select name="categories">
               <option value="kitchen-and-bath">Kitchen & Bath (94)</option>
             </select>
-            <h3>PRODUCT TYPE</h3>
+            <p class="sub-heading">PRODUCT TYPE</p>
             <hr />
             <ul class="product-types">
               <li><input type="checkbox" /> Made To Order (328)</li>
@@ -75,7 +78,7 @@
           </div>
         </aside>
         <section class="main-content">
-          <h1>LIGHTING LAMPS</h1>
+          <p class="heading">LIGHTING LAMPS</p>
           <div class="product-grid">
             <article class="product-card">
               <img src="images/grid-image-1.png" alt="product image" />
@@ -123,17 +126,28 @@
         <div class="newsletter-form">
           <table>
             <tr>
-              <td>Your email</td>
+              <td>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+              </td>
             </tr>
-          </table>
-          <table>
             <tr>
-              <td>Choose Your Country</td>
-              <td>Send</td>
+              <td>
+                <select id="country" name="country">
+                  <option value="">Choose your Country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  </select>
+              </td>
+              <td>
+                <button type="submit">Send</button>
+              </td>
             </tr>
           </table>
         </div>
+        
       </section>
+    </section> 
     </main>
     <div class="bottom-half">
     <footer>
@@ -177,7 +191,7 @@
           <p>Sign up for our newsletter</p>
           <div class="email-signup-input-button">
             <input type="email" placeholder="Enter Email Address" />
-            <button>Sign</button>
+            <button>Sign Up</button>
           </div>
           <p>Follow Us</p>
           <div class="social-media">
@@ -199,7 +213,7 @@
     <div class="footer-ending">
       <div class="country-flag">
         <img src="images/flag.png" alt="product image" />
-        <p>United States</p>
+        <p><strong>United States</strong></p>
       </div>
       <div class="copyright-line">
         <p>&copy; 2018 Cymatt Limited</p>
