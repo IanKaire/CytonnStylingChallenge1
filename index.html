@@ -39,34 +39,41 @@
           <div class="categories">
             <p class="sub-heading">CATEGORIES</p>
             <hr />
-            <select name="categories">
-              <option value="tiles">Tiles (14,817)</option>
-            </select>
-            <select name="categories">
-              <option value="sanitary">Sanitary (10,527)</option>
-            </select>
-            <select name="categories">
-              <option value="electrical-fittings">
-                Electrical fittings (6,654)
-              </option>
-            </select>
-            <select name="categories">
-              <option value="light-fittings">Light Fittings (4,328)</option>
-              <option value="down-light-led">Down Light LED</option>
-              <option value="shaver-light">Shaver Light</option>
-              <option value="dp-socket-plate">DP Socket Plate</option>
-              <option value="t4-flourescent-bulb">T4 Flourescent Bulb</option>
-              <option value="led-frames">LED Frames</option>
-            </select>
-            <select name="categories">
-              <option value="iron-fittings">Iron Fittings (1,188)</option>
-            </select>
-            <select name="categories">
-              <option value="doors">Doors (1,076)</option>
-            </select>
-            <select name="categories">
-              <option value="kitchen-and-bath">Kitchen & Bath (94)</option>
-            </select>
+            <div class="dropdown-item">
+              <span>Tiles (14,817)</span>
+              <i class="fas fa-angle-down tiles-icon"></i>
+            </div>
+            <div class="dropdown-item">
+              <span>Sanitary (10,527)</span>
+              <i class="fas fa-angle-down sanitary-icon"></i>
+            </div>
+            <div class="dropdown-item">
+              <span>Electrical fittings (6,654)</span>
+              <i class="fas fa-angle-down electrical-fittings-icon"></i>
+            </div>
+            <div class="dropdown-item">
+              <span id="light-fit">Light Fittings (4,328)</span>
+              <i class="fas fa-angle-down light-fittings-icon"></i>
+            </div>
+            <ul id="drop-down" class="dropdown-content">
+              <li>Down Light LED</li>
+              <li>Shaver Light</li>
+              <li>DP Socket Plate</li>
+              <li>T4 Flourescent Bulb</li>
+              <li>LED Frames</li>
+            </ul>
+            <div class="dropdown-item">
+              <span>Iron Fittings (1,188)</span>
+              <i class="fas fa-angle-down iron-fittings-icon"></i>
+            </div>
+            <div class="dropdown-item">
+              <span>Doors (1,076)</span>
+              <i class="fas fa-angle-down doors-icon"></i>
+            </div>
+            <div class="dropdown-item">
+              <span>Kitchen & Bath (94)</span>
+              <i class="fas fa-angle-down kitchen-and-bath-icon"></i>
+            </div>
             <p class="sub-heading">PRODUCT TYPE</p>
             <hr />
             <ul class="product-types">
@@ -120,30 +127,20 @@
         </div>
         <div class="newsletter-text">
           <p>
-            Enter your mail and we'll keep you posted with news and updates!
+            Enter your mail and we'll keep you <br> posted with news and updates!
           </p>
         </div>
         <div class="newsletter-form">
-          <table>
-            <tr>
-              <td>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-              </td>
-            </tr>
-            <tr>
-              <td>
+                <input type="email" id="email" name="email" placeholder="Your email" required> 
+              <div class="newsletter-country-button">
                 <select id="country" name="country">
                   <option value="">Choose your Country</option>
                   <option value="US">United States</option>
                   <option value="CA">Canada</option>
                   <option value="UK">United Kingdom</option>
                   </select>
-              </td>
-              <td>
                 <button type="submit">Send</button>
-              </td>
-            </tr>
-          </table>
+              </div>  
         </div>
         
       </section>
