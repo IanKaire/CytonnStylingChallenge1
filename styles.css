@@ -4,11 +4,29 @@
   --light-grey-color: #7f7e7e;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto; /* Center the content horizontally */
   font-size: 16px; /* Set a base font size */
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -17,7 +35,7 @@ body {
 }
 
 header {
-  padding: 1rem 9%;
+  padding: 1rem 8%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,7 +49,6 @@ header {
 header img {
   width: 24%;
   height: 24%;
-  margin-left: 2rem;
 }
 
 nav {
@@ -56,7 +73,7 @@ a {
 }
 
 main .content-container {
-  padding: 2rem 4rem;
+  padding: 2rem 7rem;
 }
 
 main .newsletter-section {
@@ -75,7 +92,7 @@ aside {
 }
 
 input[type="text"] {
-  width: 90%;
+  width: 60%;
   padding: 0.5rem 1rem;
   border: 1px solid rgb(205, 199, 199);
   margin-bottom: 1rem;
@@ -153,7 +170,7 @@ hr {
 .categories hr {
   margin: 1rem 0;
   border: 0.05rem solid rgb(236, 234, 234);
-  width: 68%;
+  width: 61%;
 }
 
 select {
@@ -245,9 +262,8 @@ button {
   background-image: url("./images/newsletter-bkg.png");
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   color: white;
 }
 
@@ -274,7 +290,7 @@ button {
 .newsletter-country-button {
   display: flex;
   justify-content: space-around;
-  width: 118%;
+  width: 104%;
 }
 
 .newsletter-country-button select {
@@ -292,13 +308,18 @@ button {
 .newsletter-form select {
   margin-top: 0;
   width: 100%;
+  font-size: 1rem;
+
 }
 .newsletter-form input::placeholder {
+  font-family: "Montserrat", sans-serif;
   color: white;
   font-size: 1rem;
 }
 .newsletter-form button {
+  font-family: "Montserrat", sans-serif;
   width: 30%;
+  font-size: 1rem;
   padding: 1rem 1.1rem;
   background-color: inherit;
   color: white;
@@ -354,7 +375,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 4rem;
+  margin-right: 16rem;
 }
 
 .email-signup p {
@@ -364,6 +385,9 @@ footer {
   font-weight: bold;
 }
 
+.email-signup p:first-child {
+  font-size: 0.8rem;
+}
 .email-signup-input-button {
   display: flex;
   flex-direction: row;
@@ -373,17 +397,22 @@ footer {
 .email-signup input[type="email"] {
   width: 100%;
   padding: 0.5rem 1rem;
+  padding-right: 5rem;
   border: 1px solid lightgrey;
   margin-bottom: 0.5rem;
   font-size: 0.6rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .email-signup button {
-  width: 60%;
-  background-color: black;
+  width: 40%;
+  background-color: rgb(19, 18, 18);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   cursor: pointer;
   margin-bottom: 0.5rem;
   font-size: 0.7rem;
@@ -431,7 +460,7 @@ footer {
   color: var(--light-grey-color);
 }
 .copyright-line {
-  margin-left: 64rem;
+  margin-left: 68rem;
 }
 
 .footer-ending div p {
@@ -455,76 +484,77 @@ footer {
   font-size: 0.7rem;
 }
 
-@media (min-width: 992px) {
-  /* Styles for desktops here */
-  .content-container {
-    display: flex;
-    flex-wrap: row;
-  }
-
-  aside {
-    width: 20%;
-  }
-
-  section.main-content {
-    width: 78%;
-  }
-
-  /* Other styles for larger screens */
+.toggle-button {
+  border: none;
+  background-color: inherit;
+  color: #fff;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Styles for tablets here */
-  .content-container {
-    flex-direction: column;
-  }
-
-  aside,
-  section.main-content {
-    width: 100%;
-  }
-
-  /* Other styles for tablets */
+.open {
+  display: block !important;
 }
 
-@media (max-width: 767px) {
-  /* Styles for mobile phones here */
-  .content-container,
-  .footer-content {
-    flex-direction: column;
-  }
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: var(--light-grey-color);
+  width: 20%;
+  height: 100vh;
+}
 
-  aside,
-  section.main-content {
-    width: 100%;
-  }
-  header,
-  nav {
-    flex-direction: column;
-  }
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style-type: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
 
-  .nav-links {
-    justify-content: flex-start;
-  }
 
+.mobile-nav__items li {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+ }
+/* Responsive styles for mobile and tablets */
+
+@media (min-width: 40rem) {
+.toggle-button, .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+   .main-nav {
+      display: none;
+    }
+  .content-container, .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
   .product-grid {
     flex-direction: column;
-  }
+}
 
-  .product-card {
+.product-card {
     width: 100%;
     margin-bottom: 1rem;
-  }
+}
 
-  .newsletter-section {
+.newsletter-section {
     flex-direction: column;
     align-items: center;
-  }
-
-  .newsletter-text,
-  .newsletter-form {
-    width: 100%;
-  }
-
-  /* Other styles for mobile phones */
 }
+
+.newsletter-text, .newsletter-form {
+    width: 100%;
+}
+  }
+
+ 

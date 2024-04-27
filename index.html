@@ -11,9 +11,13 @@
     <script src="/app.js" defer></script>
   </head>
   <body>
+    <div class="backdrop"></div>
     <header>
+      <button class="toggle-button">
+      <i class="fas fa-bars"></i>   
+      </button>
       <img src="images/logo.png" alt="Cymatt" />
-      <nav>
+      <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="#">Tiles</a></li>
           <li><a href="#">Sanitary</a></li>
@@ -28,9 +32,26 @@
           <li><a href="#">Contact Us</a></li>
           <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
           <input type="text" id="search-bar" placeholder="Search our products" style="display: none;">  
-        </ul>
+        </ul>   
       </nav>
     </header>
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__items">
+        <li><a href="#">Tiles</a></li>
+        <li><a href="#">Sanitary</a></li>
+        <li><a href="#">Electrical fittings</a></li>
+        <li><a href="#">Light Fittings</a></li>
+        <li><a href="#">Iron Fittings</a></li>
+        <li><a href="#">Doors</a></li>
+        <li><a href="#">Kitchen</a></li>
+        <li><a href="#">I</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
+        <input type="text" id="search-bar" placeholder="Search our products" style="display: none;"> 
+      </ul>   
+    </nav>
     <main>
      <section class="container">
       <section class="content-container">
@@ -135,9 +156,9 @@
               <div class="newsletter-country-button">
                 <select id="country" name="country">
                   <option value="">Choose your Country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="UK">United Kingdom</option>
+                  <option value="KE">Kenya</option>
+                  <option value="TZ">Tanzania</option>
+                  <option value="UG">Uganda</option>
                   </select>
                 <button type="submit">Send</button>
               </div>  
