@@ -61,10 +61,11 @@ nav {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding-right: 1.5rem;
 }
 
 .nav-links li {
-  margin: 0 0.6rem;
+  margin-right: 20px;
 }
 
 a {
@@ -522,6 +523,12 @@ footer {
 .mobile-nav__item a {
   font-size: 1.5rem;
  }
+
+ #search-bar {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
 /* Responsive styles for mobile and tablets */
 
 @media (max-width: 1280px) {
@@ -543,9 +550,18 @@ footer {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1026px) {
   body{
     height: 100vh;
+  }
+  .main-nav {
+    display: none;
+  }
+  header img {
+    margin-right: 20rem;
+  }
+  .toggle-button{
+    margin-left: 0.05rem;
   }
   aside {
     width: 40%; 
@@ -579,7 +595,7 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1026px) {
 .toggle-button, .mobile-nav {
     display: none;
   }
@@ -589,6 +605,7 @@ footer {
   header img {
     width: 30%;
     height: 30%;
+    margin-right: 0;
   }
    .main-nav {
       display: none;
@@ -687,6 +704,16 @@ input[type="text"] {
 
 .email-signup {
   margin-right: 1rem;
+}
+
+.search-icon {
+  margin-left: 5rem;
+}
+
+#search-bar {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
 }
 }
 
