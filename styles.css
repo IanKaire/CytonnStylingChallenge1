@@ -88,12 +88,12 @@ main .newsletter-section {
 aside {
   width: 20%;
   padding: 1rem;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
   margin-top: 0.6rem;
 }
 
 input[type="text"] {
-  width: 60%;
+  width: 70%;
   padding: 0.5rem 1rem;
   border: 1px solid rgb(205, 199, 199);
   margin-bottom: 1rem;
@@ -206,7 +206,7 @@ section.main-content {
 .heading {
   align-self: start;
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  margin-left: 3.5rem;
   font-size: 1.6rem;
 }
 
@@ -217,11 +217,11 @@ section.main-content {
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .product-card {
-  width: 27%;
+  width: 30%;
   margin-bottom: 1rem;
   text-align: center;
   padding: 0.7rem;
@@ -264,6 +264,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 1rem 3rem;
   color: white;
 }
@@ -615,8 +616,12 @@ footer {
       align-items: center;
       width: 100%;
   }
+
+  input[type="text"] {
+      width: 20%;
+  }
   aside {
-    width: 100%; 
+    width: 40%; 
     padding-left: 0rem;
     margin-right: 0;
   }
@@ -678,10 +683,11 @@ input[type="text"] {
 
 .newsletter-text {
     width: 100%;
+    text-align: center;
 }
 
 .newsletter-form {
-    width: 135%;
+    width: auto;
     padding-left: 1.2rem;
 }
 
