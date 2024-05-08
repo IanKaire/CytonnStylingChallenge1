@@ -602,6 +602,55 @@ footer {
   }
 }
 
+@media screen and (min-width: 769px) and (max-width: 943px) {
+
+
+.newsletter-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-text {
+    width: 100%;
+    text-align: center;
+}
+
+.newsletter-form {
+    width: auto;
+    padding-left: 1.2rem;
+}
+.copyright-line {
+    margin-left: 30rem;
+  }
+
+.footer-final{
+  flex-direction: row wrap;
+}
+
+.footer-final li {
+  margin: 0.5rem;
+  font-size: 0.6rem;
+}
+
+.footer-links {
+  flex-direction: column;
+}
+
+.email-signup {
+  margin-right: 1rem;
+}
+
+.search-icon {
+  margin-left: 5rem;
+}
+
+#search-bar {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+}
+
 @media (max-width: 768px) {
   header img {
     width: 30%;
@@ -618,7 +667,7 @@ footer {
   }
 
   input[type="text"] {
-      width: 20%;
+      width: 100%;
   }
   aside {
     width: 40%; 
@@ -653,11 +702,6 @@ footer {
 .categories hr {
   width: 0;
 }
-
-input[type="text"] {
-  width: 100%;
-}
-
   .heading {
     margin-left: 0;
   }
@@ -721,5 +765,51 @@ input[type="text"] {
   padding: 0.5rem;
   width: 100%;
 }
+
+.footer-ending {
+  justify-content: center;
+}
 }
 
+
+@media screen and (min-width: 615px) and (max-width: 768px) {
+ 
+  .heading {
+    margin-left: 3.5rem;
+  }    
+.tiles-icon {
+  margin-left: 6.3rem;
+}
+.sanitary-icon {
+  margin-left: 4.7rem;
+}
+
+.light-fittings-icon {
+  margin-left: 3rem;
+}
+
+.iron-fittings-icon {
+  margin-left: 5rem;
+}
+
+.doors-icon {
+  margin-left: 6.2rem;
+}
+
+.kitchen-and-bath-icon {
+  margin-left: 6.1rem;
+}
+}
+
+/* @media screen and (min-width: 500px) and (max-width: 767px) {
+ 
+ .footer-ending {
+   justify-content: center;
+ }
+} */
+
+@media (max-width: 500px) {
+input[type="text"] {
+  width: 250%;
+}
+}
